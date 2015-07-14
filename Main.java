@@ -13,10 +13,10 @@ public class Main extends JFrame{
    
     public Thread t = new Thread(jg);
     
-	private Image dbImage;			//This creates a double buffer image of the background
+    private Image dbImage;			//This creates a double buffer image of the background
     private Graphics dbg;			//This creates a double buffer image of the balloon
     
-	static Enemy b1= new Enemy((int)(Math.random()*1000)+10,(int)(Math.random()*700)+10);   //The next 4 lines create 5 enemies
+    static Enemy b1= new Enemy((int)(Math.random()*1000)+10,(int)(Math.random()*700)+10);   //The next 4 lines create 5 enemies
 	static Enemy b2= new Enemy((int)(Math.random()*1000)+10,(int)(Math.random()*700)+10);
 	static Enemy b3= new Enemy((int)(Math.random()*1000)+10,(int)(Math.random()*700)+10);
     static Enemy b4= new Enemy((int)(Math.random()*1000)+10,(int)(Math.random()*700)+10);
