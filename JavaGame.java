@@ -95,8 +95,7 @@ public class JavaGame extends JFrame implements Runnable, MouseMotionListener {
     }
 
     public void gameOver() throws FileNotFoundException, IOException {
-     
-        int i=0;
+    	
         BufferedWriter writer = null;
         StringBuilder high_score = new StringBuilder("");
         
@@ -108,19 +107,18 @@ public class JavaGame extends JFrame implements Runnable, MouseMotionListener {
         }
         
         if(Integer.toString(count).compareTo(high_score.toString())>0){
-        try{
-            writer = new BufferedWriter(new FileWriter("E:\\IT\\Java_Projects\\javagame\\src\\javagame\\HighScore.txt"));
-            writer.flush();
-            writer.write(Integer.toString(count));
-            //high_score=new StringBuilder("");
-            high_score=new StringBuilder(Integer.toString(count));
-        }catch(IOException e){
-        }finally{
-            try{
-                if(writer != null) writer.close();
-            }catch(IOException e){                
-            }
-        }      
+        	try{
+	            writer = new BufferedWriter(new FileWriter("E:\\IT\\Java_Projects\\javagame\\src\\javagame\\HighScore.txt"));
+	            writer.flush();
+	            writer.write(Integer.toString(count));
+            	high_score=new StringBuilder(Integer.toString(count));
+        	}catch(IOException e){
+        	}finally{
+            	try{
+                	if(writer != null) writer.close();
+            	}catch(IOException e){                
+            	}
+        	}      
         }
          
         JOptionPane.showMessageDialog(this, "<html>Game Over <br> Your Score is: "+count
