@@ -9,17 +9,11 @@ import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 import java.io.BufferedWriter;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Reader;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -72,7 +66,6 @@ public class JavaGame extends JFrame implements Runnable, MouseMotionListener {
 
     //This is the default constructor and conditions for JFrame(1)
     public JavaGame() {
-
         //load images
         ImageIcon i = new ImageIcon("E:\\IT\\Java_Projects\\javagame\\clouds.png");
         bkgrnd = i.getImage();
@@ -80,7 +73,7 @@ public class JavaGame extends JFrame implements Runnable, MouseMotionListener {
         x = 250;
         y = 150;
     }
-
+    
 
     public void paintComponent(Graphics g) {
     
@@ -106,7 +99,6 @@ public class JavaGame extends JFrame implements Runnable, MouseMotionListener {
         int i=0;
         BufferedWriter writer = null;
         StringBuilder high_score = new StringBuilder("");
-        
         
         Reader reader = new FileReader("E:\\IT\\Java_Projects\\javagame\\src\\javagame\\HighScore.txt");
         int data = reader.read();
